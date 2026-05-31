@@ -5,7 +5,15 @@ using Data.Core.Address.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new()
+    {
+        Title = "GK APIs",
+        Version = "v1",
+        Description = "Collection of utility APIs"
+    });
+});
 
 builder.Services.AddScoped<IAddressParser, AddressParser>();
 
