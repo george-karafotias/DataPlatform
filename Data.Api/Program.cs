@@ -11,11 +11,11 @@ builder.Services.AddScoped<IAddressParser, AddressParser>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.MapGet("/", () => Results.Ok(new
 {
