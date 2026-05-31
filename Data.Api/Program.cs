@@ -17,6 +17,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapGet("/", () => Results.Ok(new
+{
+    Name = "Data API",
+    Version = "1.0"
+}));
+
 var v1 = app.MapGroup("/v1");
 v1.MapAddressEndpoints();
 
