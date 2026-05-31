@@ -9,7 +9,10 @@ namespace Data.Api.Endpoints
         public static RouteGroupBuilder MapAddressEndpoints(
             this RouteGroupBuilder group)
         {
-            group.MapPost("/parse",
+            var addressGroup = group.MapGroup("/address")
+                                    .WithTags("Address");
+
+            addressGroup.MapPost("/parse",
             (AddressRequest request, IAddressParser parser) =>
             {
                 if (string.IsNullOrWhiteSpace(request.Address))
