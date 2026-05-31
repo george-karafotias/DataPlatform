@@ -23,6 +23,12 @@ app.MapGet("/", () => Results.Ok(new
     Version = "1.0"
 }));
 
+app.MapGet("/health", () => Results.Ok(new
+{
+    Status = "Healthy",
+    Timestamp = DateTime.UtcNow
+}));
+
 var v1 = app.MapGroup("/v1");
 v1.MapAddressEndpoints();
 
