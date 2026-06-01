@@ -1,6 +1,8 @@
 using Data.Api.Endpoints;
 using Data.Core.Address.Interfaces;
 using Data.Core.Address.Services;
+using Data.Core.Greeklish.Interfaces;
+using Data.Core.Greeklish.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddScoped<IAddressParser, AddressParser>();
+builder.Services.AddScoped<IGreeklishConverter, GreeklishConverter>();
 
 var app = builder.Build();
 
@@ -39,5 +42,6 @@ app.MapGet("/health", () => Results.Ok(new
 
 var v1 = app.MapGroup("/v1");
 v1.MapAddressEndpoints();
+v1.MapGreeklishEndpoints();
 
 app.Run();
