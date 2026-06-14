@@ -3,6 +3,9 @@ using Data.Core.Address.Interfaces;
 using Data.Core.Address.Services;
 using Data.Core.Greeklish.Interfaces;
 using Data.Core.Greeklish.Services;
+using System.Text.Json.Serialization;
+using Data.Core.Parking.Interfaces;
+using Data.Core.Parking.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +22,13 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddScoped<IAddressParser, AddressParser>();
 builder.Services.AddScoped<IGreeklishConverter, GreeklishConverter>();
+builder.Services.AddSingleton<IParkingService, ParkingService>();
+
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(
+        new JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -43,5 +53,6 @@ app.MapGet("/health", () => Results.Ok(new
 var v1 = app.MapGroup("/v1");
 v1.MapAddressEndpoints();
 v1.MapGreeklishEndpoints();
+v1.MapParkingEndpoints();
 
 app.Run();
