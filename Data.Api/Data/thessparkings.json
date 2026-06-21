@@ -496,8 +496,8 @@
   },
   {
     "Name": "Parking TX (θεαγένιο)",
-    "Latitude": 40.6192608,
-    "Longitude": 22.9404627,
+    "Latitude": 40.6193566,
+    "Longitude": 22.9571744,
     "Address": "Αετοράχης 47, Θεσσαλονίκη 54639",
     "ParkingType": "Surface",
     "IsFree": false,
@@ -518,8 +518,8 @@
   },
   {
     "Name": "Parking Kiritsi",
-    "Latitude": 40.6302573,
-    "Longitude": 22.9332854,
+    "Latitude": 40.6302613,
+    "Longitude": 22.94822,
     "Address": "Πλ. Ιπποδρομίου 17, Θεσσαλονίκη 54621",
     "ParkingType": "Underground",
     "IsFree": false,
