@@ -33,14 +33,15 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 // 👇 CORS configuration
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularDev",
-        policy =>
-        {
-            policy
-                .WithOrigins("http://localhost:4200")
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowAngular", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:4200",
+            "https://thess-parking-app.netlify.app"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
 });
 
 var app = builder.Build();
