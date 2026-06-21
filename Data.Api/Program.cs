@@ -46,7 +46,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowAngularDev");
+app.UseCors("AllowAngular");
 
 //if (app.Environment.IsDevelopment())
 //{
