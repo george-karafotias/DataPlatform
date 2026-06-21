@@ -386,8 +386,8 @@
   },
   {
     "Name": "Parking Εκάβης",
-    "Latitude": 40.6126758,
-    "Longitude": 22.8816951,
+    "Latitude": 40.6126798,
+    "Longitude": 22.9553379,
     "Address": "Εκάβης 1, Θεσσαλονίκη 54641",
     "ParkingType": "Underground",
     "IsFree": false,
@@ -474,8 +474,8 @@
   },
   {
     "Name": "PARKING CENTRO",
-    "Latitude": 40.6290337,
-    "Longitude": 22.8710028,
+    "Latitude": 40.6318884,
+    "Longitude": 22.9392198,
     "Address": "Πλουτάρχου 3, Θεσσαλονίκη 54623",
     "ParkingType": "Surface",
     "IsFree": false,
@@ -496,7 +496,7 @@
   },
   {
     "Name": "Parking TX (θεαγένιο)",
-    "Latitude": 40.6192568,
+    "Latitude": 40.6192608,
     "Longitude": 22.9404627,
     "Address": "Αετοράχης 47, Θεσσαλονίκη 54639",
     "ParkingType": "Surface",
